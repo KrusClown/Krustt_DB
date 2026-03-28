@@ -1,19 +1,12 @@
 # Krustt_DB
 A colorful C++17 console application that manages a database of The Simpsons characters using a custom MapReduce engine — built entirely for the terminal with ANSI colors and ASCII art.
 
-_  _____  _   _  ___  _____ _____
- | |/ / _ \| | | |/ __||_   _|_   _|
- | ' / |_| | |_| |\__ \  | |   | |
- | . \|   /|  _  |/ __/  | |   | |
- |_|\_\_|\_\|_| |_||____| |_|   |_|
-  ____  ____
- |  _ \| __ )
- | | | |  _ \
- | |_| | |_) |
- |____/|____/
-  ====================================
-   Hey Hey!  *  MapReduce Edition
-  ====================================
+
+## Technologies Used
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js&perline=3" />
+</p>
 
   # MapReduce Architecture
   [Characters] --> [MAP] --> [SHUFFLE] --> [REDUCE] --> [Result]
