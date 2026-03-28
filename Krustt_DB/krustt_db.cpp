@@ -553,6 +553,67 @@ int main() {
         {"Fallout Boy",             12},
         {"Santa's Little Helper",    8},
         {"Snowball II",              3},
+        // Extended Family & Relatives
+        {"Sideshow Bob",            38},
+        {"Cecil Terwilliger",       36},
+        {"Robert Underdunk Terwilliger Sr.", 70},
+        {"Frank Grimes",            35},
+        {"Frank Grimes Jr.",        16},
+        {"Mindy Simmons",           28},
+        {"Karl",                    35},
+        {"Lenny's Wife",            37},
+        // recurring Springfield Adults
+        {"Artie Ziff",              39},
+        {"Patty and Selma boss",    55},
+        {"Wendell Borton",          10},
+        {"Richard",                 10},
+        {"Lewis Clark",             10},
+        {"Üter Zorker",             10},
+        {"Alison Taylor",           10},
+        {"Alex Whitney",            10},
+        // Religion & Community
+        {"Reverend Lovejoy",        50},
+        {"Ned Flanders Sr.",        75},
+        {"Beatrice Simmons",        82},
+        // Crime & Law
+        {"Eddie",                   40},
+        {"Lou",                     40},
+        {"Judge Snyder",            58},
+        {"Blue-Haired Lawyer",      50},
+        {"Freddy Quimby",           22},
+        // Media & Culture
+        {"Brockman Anchor",         45},
+        {"Smooth Jimmy Apollo",     42},
+        {"Bill",                    38},
+        {"Marty",                   36},
+        {"Scott Christian",         40},
+        // Business & Industry
+        {"Lyle Lanley",             45},
+        {"Hank Scorpio",            40},
+        {"Don Vittorio",            70},
+        {"Rex Banner",              42},
+        {"Russ Cargill",            50},
+        // Historical & Legendary Springfield
+        {"Jebediah Springfield",    60},
+        {"Shelbyville Manhattan",   60},
+        // Kids (extended)
+        {"Bart's Elephant Stampy",  2},
+        {"Patches",                 10},
+        {"Poor Violet",             10},
+        {"Brendan Dorsey",          10},
+        {"Weasel",                  13},
+        // Celebrities & One-timers
+        {"Michael Jackson (Leon)",  35},
+        {"Conan O'Brien",           30},
+        {"Bob Hope",                90},
+        {"Hugh Jass",               45},
+        {"Larry Burns",             45},
+        {"Surly Duff",              35},
+        {"Duff Gardner",            40},
+        // Animals & Pets
+        {"Pinchy the Lobster",       1},
+        {"Duncan the Horse",         8},
+        {"Princess the Poodle",      4},
     };
 
     // Splash screen
