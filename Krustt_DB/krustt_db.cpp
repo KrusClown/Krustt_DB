@@ -614,6 +614,76 @@ int main() {
         {"Pinchy the Lobster",       1},
         {"Duncan the Horse",         8},
         {"Princess the Poodle",      4},
+        // More Springfield Residents
+        {"Herman Hermann",          50},
+        {"Sanjay Nahasapeemapetilon",38},
+        {"Dr. Marvin Monroe",       50},
+        {"Lionel Hutz",             42},
+        {"Dave Shutton",            45},
+        {"Allison Taylor",          10},
+        {"Elizabeth Hoover",        38},
+        {"Agnes Skinner",           80},
+        {"Brandine Spuckler",       30},
+        {"Cletus Spuckler",         32},
+        {"Baby Gerald",              1},
+        {"Gavin",                    8},
+        {"Database",                10},
+        // International Characters
+        {"Adil Hoxha",              10},
+        {"Bart's Penpal Cesar",     10},
+        {"Ugolin",                  40},
+        {"Larry the Barfly",        45},
+        // More Criminals
+        {"Big House",               45},
+        {"Don Brodka",              40},
+        {"Remy Beauregard Brandine", 8},
+        {"The Rich Texan",          55},
+        {"Cowboy Bob",              50},
+        // Springfield Elementary Staff
+        {"Otto's Bus",               0},
+        {"Jimbo's Mom",             38},
+        {"Brandine's Baby",          0},
+        // TV & Pop Culture (in-universe)
+        {"Itchy",                    5},
+        {"Scratchy",                 5},
+        {"Poochie",                  3},
+        {"Worker and Parasite",      5},
+        {"Stampy the Elephant",      4},
+        // More Adults
+        {"Patty's Girlfriend",      43},
+        {"Sideshow Bob's Wife",     35},
+        {"Francesca Terwilliger",    34},
+        {"Gino Terwilliger",          2},
+        {"Manjula Nahasapeemapetilon",36},
+        {"Sanjay's Wife",           36},
+        // Power Plant Workers
+        {"Charlie",                 40},
+        {"Lenny's Bowling Team",    38},
+        {"Julio",                   35},
+        {"Grady",                   34},
+        // Retirement Castle
+        {"Jasper Beardley",         82},
+        {"Old Jewish Man",          80},
+        {"Crazy Old Cat Lady",      70},
+        {"Leon Kompowsky",          35},
+        // Famous Visitors to Springfield
+        {"Larry Burns",             45},
+        {"Sideshow Luke Perry",     35},
+        {"John Waters",             45},
+        {"Patrick Farrelly",        40},
+        // Season characters
+        {"Arnie Pye in the Sky",    47},
+        {"Wendell's Dad",          42},
+        {"Chester J. Lampwick",     65},
+        {"Brad Goodman",            45},
+        {"Lester",                  10},
+        {"Eliza",                   10},
+        // Ancillary Springfield
+        {"Luigi Risotto",           50},
+        {"Sven Golly",              42},
+        {"Bleeding Gums Murphy",    45},
+        {"Joshua",                  10},
+        {"Sheldon Skinner",         20},
     };
 
     // Splash screen
