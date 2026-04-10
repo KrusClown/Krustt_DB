@@ -5,7 +5,7 @@ A colorful C++17 console application that manages a database of The Simpsons cha
 ## Technologies Used
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=cpp,linux,bash,vscode,hadoop,github&perline=6" />
+  <img src="https://skillicons.dev/icons?i=cpp,linux,bash,vscode,git,github&perline=6" />
 </p>
 
   # MapReduce Architecture
