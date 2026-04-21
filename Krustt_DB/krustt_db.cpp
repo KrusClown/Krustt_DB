@@ -147,7 +147,105 @@ void printMapReduceDiagram() {
 // ═══════════════════════════════════════════════════════
 //  UI HELPERS
 // ═══════════════════════════════════════════════════════
-void clearScreen() { std::cout << "\033[2J\033[H"; }
+void clearScreen() { std::cout << "\033[2J\033[H"; std::cout.flush(); }
+
+void sleep_ms(int ms) {
+    std::this_thread::sleep_for(std::chrono::milliseconds(ms));
+}
+
+// Wipe down: fills screen with color rows then clears
+void transitionWipeDown(const std::string& color = "\033[1m\033[93m") {
+    int rows = 24;
+    for (int i = 0; i < rows; ++i) {
+        std::cout << "\033[" << (i+1) << ";1H"; // move cursor to row i
+        std::cout << color << std::string(60, ' ') << "\033[0m";
+        std::cout.flush();
+        sleep_ms(18);
+    }
+    sleep_ms(60);
+    clearScreen();
+}
+
+// Wipe up: fills from bottom to top
+void transitionWipeUp(const std::string& color = "\033[1m\033[95m") {
+    int rows = 24;
+    for (int i = rows; i >= 1; --i) {
+        std::cout << "\033[" << i << ";1H";
+        std::cout << color << std::string(60, ' ') << "\033[0m";
+        std::cout.flush();
+        sleep_ms(18);
+    }
+    sleep_ms(60);
+    clearScreen();
+}
+
+// Horizontal bar sweep
+void transitionSweep(const std::string& color = "\033[1m\033[96m") {
+    int cols = 60;
+    for (int c = 0; c < cols; ++c) {
+        // Draw vertical bar at column c across all rows
+        for (int r = 1; r <= 24; ++r) {
+            std::cout << "\033[" << r << ";" << (c+1) << "H";
+            std::cout << color << "|" << "\033[0m";
+        }
+        std::cout.flush();
+        sleep_ms(8);
+    }
+    sleep_ms(50);
+    clearScreen();
+}
+
+// Fade using dim/bright cycling
+void transitionFade() {
+    std::string phases[] = {"\033[1m", "\033[0m", "\033[2m", "\033[0m"};
+    for (auto& p : phases) {
+        std::cout << p;
+        std::cout.flush();
+        sleep_ms(60);
+    }
+    clearScreen();
+}
+
+// Donut spinner loading bar
+void transitionSpinner(const std::string& label = "Loading...") {
+    const std::string frames[] = {"|", "/", "-", "\\"};
+    std::cout << "\033[2J\033[H";
+    for (int i = 0; i < 12; ++i) {
+        std::cout << "\033[3;5H";
+        std::cout << "\033[1m\033[95m  " << frames[i%4] << "  "
+                  << "\033[93m" << label << "\033[0m   ";
+        std::cout.flush();
+        sleep_ms(55);
+    }
+    clearScreen();
+}
+
+// Pixel dissolve: random dots fill screen then clear
+void transitionDissolve() {
+    std::cout << "\033[2J\033[H";
+    // Print expanding dots line by line
+    int rows = 20, cols = 50;
+    for (int i = 0; i < rows; i += 2) {
+        std::cout << "\033[" << (i+1) << ";1H";
+        std::cout << "\033[1m\033[93m" << std::string(cols, '.') << "\033[0m";
+        std::cout.flush();
+        sleep_ms(25);
+    }
+    sleep_ms(80);
+    clearScreen();
+}
+
+// Choose transition based on menu option
+void transition(int option = 0) {
+    switch (option % 6) {
+        case 0: transitionWipeDown(); break;
+        case 1: transitionWipeUp();   break;
+        case 2: transitionSweep();    break;
+        case 3: transitionFade();     break;
+        case 4: transitionSpinner();  break;
+        case 5: transitionDissolve(); break;
+    }
+}
 
 // Measure visible string length (strip ANSI escape codes)
 int visibleLen(const std::string& s) {
@@ -432,7 +530,7 @@ void deleteCharacter(std::vector<Character>& db) {
 //  MENU
 // ═══════════════════════════════════════════════════════
 void printMenu(const std::vector<Character>& db) {
-    clearScreen();
+    transitionWipeDown("[1m[93m");
     printSplashArt();
 
     printBoxTop(44);
@@ -971,13 +1069,13 @@ int main() {
         std::cout << "\n";
 
         switch (choice) {
-            case 1: clearScreen(); printDB(db);              waitEnter(); break;
-            case 2: clearScreen(); addCharacter(db);                      break;
-            case 3: clearScreen(); deleteCharacter(db);                   break;
-            case 4: clearScreen(); searchByName(db);                      break;
-            case 5: clearScreen(); mapReduceAgeGroups(db);                break;
-            case 6: clearScreen(); mapReduceAverageAge(db);               break;
-            case 7: clearScreen(); mapReduceOldestYoungest(db);           break;
+            case 1: transition(0); printDB(db);              waitEnter(); break;
+            case 2: transition(1); addCharacter(db);                      break;
+            case 3: transition(2); deleteCharacter(db);                   break;
+            case 4: transition(3); searchByName(db);                      break;
+            case 5: transition(4); mapReduceAgeGroups(db);                break;
+            case 6: transition(5); mapReduceAverageAge(db);               break;
+            case 7: transition(0); mapReduceOldestYoungest(db);           break;
             case 0:
                 clearScreen();
                 std::cout << HOMER_YELLOW;
